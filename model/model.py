@@ -8,6 +8,7 @@ from torch.utils.data import DataLoader
 import numpy as np
 from torchsummary import summary
 
+from vars import PATH
 
 class CNN(nn.Module):
     def __init__(self):
@@ -109,7 +110,7 @@ optimizer = torch.optim.Adam(model.parameters(), lr=1e-3)
 #training_data
 from torchvision import transforms
 tr = transforms.Compose([transforms.ToTensor(), transforms.Grayscale()])
-training_data = torchvision.datasets.ImageFolder('F:/MEGA/CETYS/sechs/vision_artificial/archive/data/train_black/', tr)
+training_data = torchvision.datasets.ImageFolder(PATH, tr)
 batch_size = 64
 
 train_dataloader = DataLoader(training_data, batch_size=batch_size)

@@ -1,0 +1,1 @@
+PATH = 'F:/MEGA/CETYS/sechs/vision_artificial/archive/data/train_black/'
